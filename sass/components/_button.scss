@@ -1,0 +1,55 @@
+.btn {
+
+    &:link, &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block; // for removing inline for a link 
+        border-radius: 10rem; 
+        transition: all .2s;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2); // offset x offset y blur color
+    }
+
+    &:active { /* on click */
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2)
+    }
+
+    &--white { 
+        background-color: $color-white;
+        color: $color-gray-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        font-size: 1.6rem;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &:hover::after { // hover animation to scale up 
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    &--animate { // resets back to original after animation with delay of .75s 
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards; // returns back to normal pos after 
+    }
+}
