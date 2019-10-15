@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto; //Center inside a block element
 
     &:not(:last-child) {
@@ -10,9 +9,6 @@
     @include clearfix;
 
     [class^="col-"] { //Select all that start with col-
-        color: white;
-        background-color: orangered;
-        text-align: center;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
