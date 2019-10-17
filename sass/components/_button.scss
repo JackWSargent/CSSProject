@@ -36,7 +36,7 @@
         width: 100%;
         border-radius: 10rem;
         position: absolute;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         top: 0;
         left: 0;
         z-index: -1;
@@ -51,5 +51,29 @@
     &--animate { // resets back to original after animation with delay of .75s 
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards; // returns back to normal pos after 
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline; //to use margin, padding, etc
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15); //0x, 10px y dir, 20px blur, color + opacity 
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15); //0x, 10px y dir, 20px blur, color + opacity 
+        transform: translateY(0);
     }
 }
