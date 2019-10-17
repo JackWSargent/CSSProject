@@ -24,12 +24,12 @@
 
         &:hover {
             outline: 1.5rem solid $color-primary;
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-.5rem); //make it bigger and raise up 5 px
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
             z-index: 20;
         }
     }
     &:hover &__photo:not(:hover) { //When you hover a photo and is not a photo you are hovering
-        transform: scale(.95);
+        transform: scale(.95); //Make the other ones smaller
     }
 }
