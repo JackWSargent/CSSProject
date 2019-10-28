@@ -1,5 +1,6 @@
 {
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
-    "editor.fontSize": 20
+    "editor.fontSize": 20,
+    "editor.letterSpacing": -2
 }
